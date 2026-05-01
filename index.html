@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1224399346569927');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1224399346569927&ev=PageView&noscript=1"
+  alt="" /></noscript>
+  <!-- End Meta Pixel Code -->
+  <title>The Maple Ledger — Business &amp; Sport</title>
+  <link rel="icon" href="logo.jpg" type="image/jpeg">
+  <link rel="apple-touch-icon" href="logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1a1e;
+      --paper: #f7f4ee;
+      --paper-dark: #ebe6dc;
+      --accent: #b3190e;
+      --accent-dark: #8c120a;
+      --muted: #5c5a56;
+      --rule: #c9c3b8;
+      --max: 720px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Newsreader", Georgia, "Times New Roman", serif;
+      font-size: 1.0625rem;
+      line-height: 1.65;
+      color: var(--ink);
+      background: linear-gradient(165deg, #e8e2d8 0%, var(--paper) 18%, var(--paper) 100%);
+      min-height: 100vh;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    #request-form {
+      scroll-margin-top: 1rem;
+    }
+
+    .request-section {
+      clear: both;
+      margin: 2rem 0 1.5rem;
+      padding: 1.35rem 1.2rem;
+      border: 1px solid var(--rule);
+      background: #fff;
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
+    }
+
+    .request-section h2 {
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 1rem;
+      margin: 0 0 0.35rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .request-section .request-lead {
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin: 0 0 1rem;
+      line-height: 1.45;
+    }
+
+    .application-form {
+      margin: 0;
+      padding: 0;
+      border: none;
+      background: transparent;
+    }
+
+    .application-form .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .application-form .form-group label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .application-form .form-group input[type="text"],
+    .application-form .form-group input[type="email"] {
+      width: 100%;
+      padding: 0.65rem 0.75rem;
+      border: 1px solid var(--rule);
+      font-family: "Newsreader", Georgia, serif;
+      font-size: 1rem;
+      color: var(--ink);
+      background: var(--paper);
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+
+    .application-form .form-group input:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px rgba(179, 25, 14, 0.12);
+    }
+
+    .application-form .phone-field-wrap {
+      display: flex;
+      align-items: stretch;
+      width: 100%;
+      border: 1px solid var(--rule);
+      background: var(--paper);
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+
+    .application-form .phone-field-wrap:focus-within {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px rgba(179, 25, 14, 0.12);
+    }
+
+    .application-form .phone-prefix {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      padding: 0.65rem 0.55rem 0.65rem 0.75rem;
+      background: var(--paper-dark);
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--muted);
+      border-right: 1px solid var(--rule);
+    }
+
+    .application-form .phone-input {
+      flex: 1;
+      min-width: 0;
+      border: none;
+      border-radius: 0;
+      padding: 0.65rem 0.75rem;
+      font-family: "Newsreader", Georgia, serif;
+      font-size: 1rem;
+      color: var(--ink);
+      background: transparent;
+    }
+
+    .application-form .phone-input:focus {
+      outline: none;
+      box-shadow: none;
+    }
+
+    .application-form .form-actions {
+      margin-top: 0.35rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .application-form .submit-btn {
+      width: 100%;
+      padding: 0.75rem 1.25rem;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .application-form .submit-btn:hover {
+      background: var(--accent-dark);
+    }
+
+    .application-form .submit-btn:disabled {
+      opacity: 0.75;
+      cursor: not-allowed;
+    }
+
+    .application-form .change-btn {
+      width: 100%;
+      padding: 0.65rem 1.1rem;
+      background: transparent;
+      color: var(--accent-dark);
+      border: 2px solid var(--accent);
+      font-family: "Newsreader", Georgia, serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .application-form .change-btn:hover {
+      background: rgba(179, 25, 14, 0.06);
+    }
+
+    .application-form input:read-only {
+      background: var(--paper-dark);
+      cursor: default;
+    }
+
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      background: rgba(26, 26, 30, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.25s, visibility 0.25s;
+    }
+
+    .modal-overlay.is-open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-overlay .modal {
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      padding: 1.5rem 1.35rem;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal-overlay .modal-title {
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--ink);
+    }
+
+    .modal-overlay .modal-text {
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.5;
+      margin-bottom: 1.1rem;
+    }
+
+    .modal-overlay .modal-close-btn {
+      width: 100%;
+      padding: 0.65rem 1.2rem;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .modal-overlay .modal-close-btn:hover {
+      background: var(--accent-dark);
+    }
+
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 1rem 1.25rem 3rem;
+    }
+
+    /* Masthead */
+    .masthead {
+      text-align: center;
+      border-bottom: 3px double var(--ink);
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .masthead__flag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .masthead__flag span {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .masthead__logo {
+      display: block;
+      margin: 0 auto 0.65rem;
+      max-height: clamp(48px, 12vw, 76px);
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .masthead__title {
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: clamp(1.85rem, 6vw, 2.75rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 0;
+      line-height: 1.1;
+    }
+
+    .masthead__tagline {
+      font-size: 0.8rem;
+      font-style: italic;
+      color: var(--muted);
+      margin: 0.35rem 0 0;
+    }
+
+    .meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.5rem 1rem;
+      font-size: 0.8125rem;
+      color: var(--muted);
+      border-bottom: 1px solid var(--rule);
+      padding: 0.5rem 0 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .meta-bar strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    /* Article */
+    article {
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+
+    .kicker {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 0 0 0.35rem;
+    }
+
+    h1 {
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: clamp(1.45rem, 4.2vw, 2rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin: 0 0 0.75rem;
+      letter-spacing: -0.015em;
+    }
+
+    .deck {
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin: 0 0 1.25rem;
+      line-height: 1.5;
+    }
+
+    .byline {
+      font-size: 0.9rem;
+      border-left: 3px solid var(--accent);
+      padding-left: 0.85rem;
+      margin-bottom: 1.5rem;
+      color: var(--muted);
+    }
+
+    .byline a,
+    .text-link {
+      color: var(--accent-dark);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      cursor: pointer;
+    }
+
+    .text-link:hover,
+    .byline a:hover {
+      color: var(--accent);
+    }
+
+    .figure {
+      margin: 0 0 1.25rem;
+      background: var(--paper-dark);
+      padding: 0.5rem;
+      border: 1px solid var(--rule);
+    }
+
+    .figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      filter: contrast(1.02) saturate(0.95);
+    }
+
+    .figure figcaption {
+      font-size: 0.78rem;
+      color: var(--muted);
+      padding: 0.5rem 0.25rem 0;
+      line-height: 1.4;
+    }
+
+    .drop-cap::first-letter {
+      float: left;
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 3.25rem;
+      line-height: 0.85;
+      padding-right: 0.45rem;
+      padding-top: 0.1rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    p {
+      margin: 0 0 1rem;
+    }
+
+    .pullquote {
+      float: right;
+      width: min(100%, 280px);
+      margin: 0 0 1rem 1.25rem;
+      padding: 1rem 1rem 1rem 1.1rem;
+      border-left: 4px solid var(--ink);
+      background: rgba(179, 25, 14, 0.06);
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 1.05rem;
+      font-style: italic;
+      line-height: 1.45;
+    }
+
+    .pullquote cite {
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
+      font-style: normal;
+      color: var(--muted);
+    }
+
+    .fact-box {
+      clear: both;
+      margin: 1.5rem 0;
+      padding: 1rem 1.1rem;
+      border: 1px solid var(--rule);
+      background: #fff;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+    }
+
+    .fact-box h2 {
+      font-family: "Libre Baskerville", Georgia, serif;
+      font-size: 0.95rem;
+      margin: 0 0 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .fact-box dl {
+      margin: 0;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.35rem 1rem;
+      font-size: 0.95rem;
+    }
+
+    .fact-box dt {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .fact-box dd {
+      margin: 0;
+    }
+
+    .footnote {
+      font-size: 0.82rem;
+      color: var(--muted);
+      border-top: 1px solid var(--rule);
+      padding-top: 0.75rem;
+      margin-top: 1.5rem;
+    }
+
+    footer.site {
+      max-width: var(--max);
+      margin: 2.5rem auto 0;
+      padding-top: 1rem;
+      border-top: 3px double var(--rule);
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .pullquote {
+        float: none;
+        width: 100%;
+        margin: 1rem 0;
+      }
+
+      .drop-cap::first-letter {
+        font-size: 2.75rem;
+      }
+
+      .meta-bar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .wrap {
+        padding: 1.5rem 2rem 4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="masthead">
+      <p class="masthead__flag">Toronto <span>✦</span> Ottawa <span>✦</span> Vancouver</p>
+      <img class="masthead__logo" src="logo.jpg" alt="The Maple Ledger">
+      <h1 class="masthead__title">The Maple Ledger</h1>
+      <p class="masthead__tagline">Independent reporting on business, ice and the road ahead</p>
+    </header>
+
+    <div class="meta-bar">
+      <span><strong>Business &amp; Sport</strong> · Special report</span>
+      <time datetime="2026-04-09">April 9, 2026</time>
+      <span>Updated 06:00 ET</span>
+    </div>
+
+    <article>
+      <p class="kicker">Income beyond the ice</p>
+      <h1>NHL forward on pairing his contract with a $15,000 AI-driven side income.</h1>
+
+      <div class="byline">
+        By <strong>Marcus O’Donnell</strong>, Ottawa · Photo: league archive
+      </div>
+
+      <figure class="figure">
+        <img
+          src="photo.webp"
+          width="900"
+          height="563"
+          alt="Hockey player on ice, dynamic side view"
+          loading="lazy">
+        <figcaption>
+          On the ice, the paycheque comes from performance; away from the arena, Ethan Tremblay says automated tools now anchor a second income stream.
+          <em>File photo.</em>
+        </figcaption>
+      </figure>
+
+      <p class="drop-cap">
+        Ethan Tremblay, under contract with an Eastern Conference club, earns his living the old-fashioned way: goals, assists, and minutes on the first line.
+        For close to a year he has also parked money inside <strong>AIMS</strong>, which <strong>Melissa Brown</strong>—Forbes had named the highest-earning trader of 2023—and <strong>Mark Eddisson</strong>, a lead engineer out of OpenAI, are said to have funded with roughly <strong>US$3 million</strong> while positioning it as one of the heavier-hitting AI systems built for listed markets.
+        Readers can <a href="#request-form" class="text-link">submit a free request on this page</a> to hear from a program representative.
+        By his account the software does not handicap games; it reallocates and reinvests within preset risk bands while he is at practice or on the road.
+      </p>
+
+      <p>
+        Promotional decks for AIMS describe a machine that reads the global landscape in real time—quotes and liquidity, economic headlines, political shocks, and chart patterns across major exchanges—then executes more than <strong>1,000 low-risk trades a minute</strong> to spread exposure and harvest small edges at speed.
+        Brown and her partners have publicly claimed that, using the same architecture, they cleared <strong>US$44 million</strong> in 2025; Tremblay says he has not audited those figures.
+      </p>
+
+      <aside class="pullquote" aria-label="Quote">
+        “I still wake up for the puck. It helps to know the stack can keep moving while I’m on the ice.”
+        <cite>— Ethan Tremblay, in an interview with The Maple Ledger</cite>
+      </aside>
+
+      <p>
+        After the system levelled out, Tremblay says it has been returning <strong>more than US$500 per day</strong> over the past twelve months, before currency swings and taxes he declined to detail.
+        Straight math: 365 days × US$500 lands near <strong>US$182,500 a year</strong> if that daily figure held every calendar day—actual results can land above or below that line.
+      </p>
+
+      <p>
+        The league had no on-the-record comment for this story. Investing carries risk; readers should weigh any strategy against their own situation.
+      </p>
+
+      <div class="fact-box">
+        <h2>At a glance</h2>
+        <dl>
+          <dt>System</dt>
+          <dd>AIMS — AI layer for global markets, news, and exchange data</dd>
+          <dt>Reported build</dt>
+          <dd>≈ US$3 million (per founders’ materials)</dd>
+          <dt>Time in use (player)</dt>
+          <dd>≈ 1 year</dd>
+          <dt>Execution (as claimed)</dt>
+          <dd>&gt; 1,000 low-risk trades / minute</dd>
+          <dt>Player’s benchmark</dt>
+          <dd>&gt; US$500 / day</dd>
+          <dt>Annual extrapolation</dt>
+          <dd>365 × 500 = <strong>US$182,500</strong> (if the daily rate held steady)</dd>
+          <dt>Founders’ 2025 (claimed)</dt>
+          <dd>US$44 million (not independently verified by this newspaper)</dd>
+        </dl>
+      </div>
+
+      <section class="request-section" id="request-form" aria-labelledby="request-heading">
+        <h2 id="request-heading">Request a consultation</h2>
+        <p class="request-lead">Leave your name, email, and phone — a representative will contact you within 24 hours. No spam, no obligation.</p>
+        <form class="application-form" id="applicationForm" autocomplete="on">
+          <div class="form-group">
+            <label for="fullName">Full name</label>
+            <input type="text" id="fullName" name="fullName" required placeholder="Your name" autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="your@email.com" autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="phone" id="phone-label">Phone</label>
+            <div class="phone-field-wrap" role="group" aria-labelledby="phone-label">
+              <span class="phone-prefix" aria-hidden="true">+1</span>
+              <input type="tel" id="phone" name="phone" required class="phone-input" maxlength="14" inputmode="numeric" autocomplete="tel-national" placeholder="(555) 123-4567" data-phone-mask="ca">
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="submit-btn" id="submitBtn">Submit</button>
+            <button type="button" class="change-btn" id="changeBtn" style="display: none;">Change data</button>
+          </div>
+        </form>
+      </section>
+
+      <p class="footnote">
+        Disclosure: The Maple Ledger may earn referral fees from partners mentioned in Business &amp; Sport. Past performance does not guarantee future results.
+        <em>AIMS:</em> attributed to Melissa Brown (Forbes: highest-earning trader, 2023) and Mark Eddisson (lead OpenAI engineer in founders’ telling); applications are accepted via the form on this page.
+      </p>
+    </article>
+
+    <footer class="site">
+      © 2026 The Maple Ledger · ISSN 2563-8841 · Print edition: Toronto, ON
+    </footer>
+  </div>
+
+  <div class="modal-overlay" id="modalOverlay" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <h3 class="modal-title" id="modalTitle">Success</h3>
+      <p class="modal-text">Application submitted successfully. Thank you!</p>
+      <button type="button" class="modal-close-btn" id="modalCloseBtn">OK</button>
+    </div>
+  </div>
+  <script src="application.js"></script>
+</body>
+</html>
